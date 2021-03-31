@@ -19,7 +19,7 @@ let Command =
           , concurrency_group : Optional Text
           , depends_on : Optional (List Text)
           , env : Optional (Map Text Text)
-          , if : Optional Text
+          , `if` : Optional Text
           , key : Optional Text
           , label : Optional Text
           , parallelism : Optional Natural
@@ -39,7 +39,7 @@ let Command =
         , concurrency_group = None Text
         , depends_on = None (List Text)
         , env = None (Map Text Text)
-        , if = None Text
+        , `if` = None Text
         , key = None Text
         , label = None Text
         , parallelism = None Natural
