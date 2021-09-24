@@ -1,12 +1,14 @@
 {- https://buildkite.com/docs/pipelines/command-step -}
-let Map =
-      https://prelude.dhall-lang.org/v16.0.0/Map/Type sha256:210c7a9eba71efbb0f7a66b3dcf8b9d3976ffc2bc0e907aadfb6aa29c333e8ed
+let Prelude =
+      https://prelude.dhall-lang.org/v20.1.0/package.dhall sha256:26b0ef498663d269e4dc6a82b0ee289ec565d683ef4c00d0ebdd25333a5a3c98
+
+let Map = Prelude.Map.Type
+
+let JSON = Prelude.JSON.Type
 
 let Retry = ./retry.dhall
 
-let PluginConfig = Map Text Text
-
-let Plugin = Map Text PluginConfig
+let Plugin = (./plugin.dhall).Plugin
 
 let Command =
       { Type =

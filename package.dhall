@@ -17,4 +17,6 @@ let wait = Steps.Wait Wait.default
 
 let Retry = ./retry.dhall
 
-in  { Steps, Wait, Block, Command, Trigger, wait, Retry }
+let Plugin = ./plugin.dhall
+
+in  { Steps, Wait, Block, Command, Trigger, wait, Retry } // Plugin
