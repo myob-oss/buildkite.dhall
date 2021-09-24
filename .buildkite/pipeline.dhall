@@ -1,13 +1,16 @@
-let bk = ./package.dhall
+let bk = ../package.dhall
 
 let Steps = bk.Steps
+
+let PluginConfigValue = bk.PluginConfigValue
+
+let JSON = https://prelude.dhall-lang.org/v20.1.0/JSON/package.dhall
 
 let main = "master"
 
 in  [ Steps.Command
         bk.Command::{
         , label = Some ":scala:"
-        , branches = Some "master"
         , env = Some (toMap { NODE_ENV = "test" })
         , agents = Some { queue = "default" }
         , commands = [ "echo yay" ]
