@@ -11,7 +11,6 @@ let main = "master"
 in  [ Steps.Command
         bk.Command::{
         , label = Some ":scala:"
-        , branches = Some "master"
         , env = Some (toMap { NODE_ENV = "test" })
         , agents = Some { queue = "default" }
         , commands = [ "echo yay" ]
