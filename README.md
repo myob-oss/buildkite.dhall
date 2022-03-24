@@ -27,5 +27,5 @@ The [pipeline.dhall](./.buildkite/pipeline.dhall) itself is test and example
 essentially you may need remote import the package in your `.buildkite/pipeline.dhall`
 
 ```dhall
-let bk = https://raw.githubusercontent.com/jcouyang/buildkite.dhall/0.3.0/package.dhall sha256:58893f017494437f31e55ef37f71cdd53eac3d7f11f9be85dcf63fa22a101a62
+let bk = https://raw.githubusercontent.com/myob-oss/buildkite.dhall/0.3.0/package.dhall sha256:58893f017494437f31e55ef37f71cdd53eac3d7f11f9be85dcf63fa22a101a62
 ```
