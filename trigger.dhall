@@ -8,11 +8,12 @@ let Trigger =
           , label : Text
           , branches : Optional Text
           , build :
-              { message : Text
-              , commit : Text
-              , branch : Text
-              , env : Optional (Map Text Text)
-              }
+              Optional
+                { message : Text
+                , commit : Text
+                , branch : Text
+                , env : Map Text Text
+                }
           }
       , default =
         { branches = None Text
