@@ -12,12 +12,13 @@ let TextField =
 
 let OptionField =
       { Type =
-          { label : Text
-          , value : Text
+          { select : Text
+          , key : Text
           , hint : Optional Text
           , required : Optional Bool
           , default : Optional Text
           , multiple : Optional Bool
+          , options : List { label : Text, value : Text }
           }
       , default =
         { hint = None Text
@@ -27,10 +28,7 @@ let OptionField =
         }
       }
 
-let InputField =
-      < Text : TextField.Type
-      | Select : { select : Text, key : Text, options : List OptionField.Type }
-      >
+let InputField = < Text : TextField.Type | Select : OptionField.Type >
 
 let Input =
       { Type =
