@@ -52,4 +52,17 @@ in  [ Steps.Command
                 }
             )
         }
+    , Steps.Input
+        bk.Input::{
+        , input = "Release?"
+        , fields =
+          [ bk.InputField.Select
+              { select = "y/n"
+              , key = "is-release"
+              , options = [ bk.OptionField::{ label = "yes", value = "yes" } ]
+              }
+          , bk.InputField.Text
+              bk.TextField::{ text = "Release Name", key = "release-name" }
+          ]
+        }
     ]
